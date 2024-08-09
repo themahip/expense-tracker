@@ -57,9 +57,9 @@ const Home = () => {
         const user = JSON.parse(localStorage.getItem("user"));
         console.log(user);
 
-        if (user.isAvatarImageSet === false || user.avatarImage === "") {
-          navigate("/setAvatar");
-        }
+        // if (user.isAvatarImageSet === false || user.avatarImage === "") {
+        //   navigate("/setAvatar");
+        // }
         setcUser(user);
         setRefresh(true);
       } else {
@@ -191,7 +191,7 @@ const Home = () => {
             className="mt-3"
           >
             <div className="filterRow">
-              <div className="text-white">
+              <div className="text-black">
                 <Form.Group className="mb-3" controlId="formSelectFrequency">
                   <Form.Label>Select Frequency</Form.Label>
                   <Form.Select
@@ -207,7 +207,7 @@ const Home = () => {
                 </Form.Group>
               </div>
 
-              <div className="text-white type">
+              <div className="text-black type">
                 <Form.Group className="mb-3" controlId="formSelectFrequency">
                   <Form.Label>Type</Form.Label>
                   <Form.Select
@@ -221,24 +221,24 @@ const Home = () => {
                   </Form.Select>
                 </Form.Group>
               </div>
-
+            <div className="icon-box">
               <div className="text-white iconBtnBox">
                 <FormatListBulletedIcon
                   sx={{ cursor: "pointer" }}
                   onClick={handleTableClick}
                   className={`${
-                    view === "table" ? "iconActive" : "iconDeactive"
+                    view === "table" ? "iconDeactive" : "iconActive"
                   }`}
                 />
                 <BarChartIcon
                   sx={{ cursor: "pointer" }}
                   onClick={handleChartClick}
                   className={`${
-                    view === "chart" ? "iconActive" : "iconDeactive"
+                    view === "chart" ? "iconDeactive" : "iconActive"
                   }`}
                 />
               </div>
-
+              </div>
               <div>
                 <Button onClick={handleShow} className="addNew">
                   Add New
@@ -291,6 +291,7 @@ const Home = () => {
                           <option value="Utilities">Utilities</option>
                           <option value="Entertainment">Entertainment</option>
                           <option value="Transportation">Transportation</option>
+                          <option value="Freelance Work">Freelance Work</option>
                           <option value="Other">Other</option>
                         </Form.Select>
                       </Form.Group>
@@ -343,7 +344,7 @@ const Home = () => {
                 </Modal>
               </div>
             </div>
-            <br style={{ color: "white" }}></br>
+            <br style={{ color: "black" }}></br>
 
             {frequency === "custom" ? (
               <>

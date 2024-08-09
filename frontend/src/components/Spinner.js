@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../assets/loader.gif"
+import logo from "../assets/Loading_2.gif"
 import { Container } from 'react-bootstrap'
 const Spinner = () => {
   return (

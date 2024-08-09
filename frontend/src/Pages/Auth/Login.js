@@ -75,7 +75,7 @@ const Login = () => {
 
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
-      <Particles
+      {/* <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -140,7 +140,7 @@ const Login = () => {
           right: 0,
           bottom: 0,
         }}
-      />
+      /> */}
       <Container
         className="mt-5"
         style={{ position: "relative", zIndex: "2 !important" }}
@@ -149,14 +149,14 @@ const Login = () => {
           <Col md={{ span: 6, offset: 3 }}>
             <h1 className="text-center mt-5">
               <AccountBalanceWalletIcon
-                sx={{ fontSize: 40, color: "white" }}
+                sx={{ fontSize: 40, color: "black" }}
                 className="text-center"
               />
             </h1>
-            <h2 className="text-white text-center ">Login</h2>
+            <h2 className="text-black text-center ">Login</h2>
             <Form>
               <Form.Group controlId="formBasicEmail" className="mt-3">
-                <Form.Label className="text-white">Email address</Form.Label>
+                <Form.Label className="text-black">Email address</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
@@ -167,7 +167,7 @@ const Login = () => {
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword" className="mt-3">
-                <Form.Label className="text-white">Password</Form.Label>
+                <Form.Label className="text-black">Password</Form.Label>
                 <Form.Control
                   type="password"
                   name="password"
@@ -186,7 +186,7 @@ const Login = () => {
                 }}
                 className="mt-4"
               >
-                <Link to="/forgotPassword" className="text-white lnk">
+                <Link to="/forgotPassword" className="text-black lnk">
                   Forgot Password?
                 </Link>
 
@@ -201,7 +201,7 @@ const Login = () => {
 
                 <p className="mt-3" style={{ color: "#9d9494" }}>
                   Don't Have an Account?{" "}
-                  <Link to="/register" className="text-white lnk">
+                  <Link to="/register" className="text-black lnk">
                     Register
                   </Link>
                 </p>

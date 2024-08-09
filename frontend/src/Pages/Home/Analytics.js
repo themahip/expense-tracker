@@ -4,7 +4,6 @@ import { Container, Row } from "react-bootstrap";
 import CircularProgressBar from "../../components/CircularProgressBar";
 import LineProgressBar from "../../components/LineProgressBar";
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 // import MovingIcon from '@mui/icons-material/Moving';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
@@ -50,6 +49,7 @@ const Analytics = ({ transactions }) => {
     "Entertainment",
     "Transportation",
     "Other",
+    "Freelance Work"
   ];
 
   const colors = {
@@ -63,6 +63,7 @@ const Analytics = ({ transactions }) => {
     "Entertainment": '#6A4C93',
     "Transportation": '#1982C4',
     "Other": '#F45B69',
+    "Freelance Work":"#179BAE"
   };
   
   
@@ -109,8 +110,8 @@ const Analytics = ({ transactions }) => {
                 {totalTurnOver}
               </div>
               <div className="card-body">
-                <h5 className="card-title" style={{color: "green"}}>Income: <ArrowDropUpIcon /> {totalTurnOverIncome} <CurrencyRupeeIcon /></h5>
-                <h5 className="card-title" style={{color: "red"}}>Expense: <ArrowDropDownIcon />{totalTurnOverExpense} <CurrencyRupeeIcon /></h5>
+                <h5 className="card-title" style={{color: "green"}}>Income: <ArrowDropUpIcon />Rs {totalTurnOverIncome} </h5>
+                <h5 className="card-title" style={{color: "red"}}>Expense: <ArrowDropDownIcon />Rs {totalTurnOverExpense} </h5>
                 <div className="d-flex justify-content-center mt-3">
                   <CircularProgressBar
                     percentage={TurnOverIncomePercent.toFixed(0)}
